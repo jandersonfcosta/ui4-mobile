@@ -22,6 +22,8 @@ td {
 
 a {
     text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -146,7 +148,7 @@ a {
     min-width: 220px;
     border-radius: 3px;
     background-color: #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .15),0 3px 6px rgba(0, 0, 0, .2);
+    box-shadow: 0 3px 16px rgba(0, 0, 0, .35);
     user-select: none;
     -webkit-user-select: none;
 }
