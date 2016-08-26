@@ -8,6 +8,8 @@ body {
     margin: 0;
     font-family: "Roboto-Regular", sans-serif;
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 table {
@@ -21,9 +23,24 @@ td {
 }
 
 a {
+    color: #000;
     text-decoration: none;
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* page --------------------------------------------------------------------- */
+
+.page {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.page-content {
+    padding: 16px;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 
@@ -43,7 +60,7 @@ a {
     height: 56px;
 }
 
-.navbar .navbar-button {
+.navbar .button {
     color: #fff;
     display: inline-block;
     text-align: center;
@@ -51,21 +68,21 @@ a {
     height: 56px;
 }
 
-.navbar .navbar-button .material-icons {
+.navbar .button .material-icons {
     line-height: 56px;
 }
 
-.navbar .navbar-button:active {
+.navbar .button:active {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.navbar-left {
+.navbar .left {
     text-align: left;
     white-space: nowrap;
     width: 56px;
 }
 
-.navbar-center .navbar-text {
+.navbar .center .text {
     font-size: 20px;
     font-weight: 500;
     text-overflow: ellipsis;
@@ -73,7 +90,7 @@ a {
     white-space: nowrap;
 }
 
-.navbar-right {
+.navbar .right {
     text-align: right;
     white-space: nowrap;
 }
@@ -92,10 +109,9 @@ a {
     -webkit-user-select: none;
 }
 
-.tabbar .scroller {
+.tabbar .fill {
+    /* se ajusta a largura do pai */
     width: 100%;
-    display: flex;
-    overflow-x: auto;
 }
 
 .tabbar .tab {
@@ -109,11 +125,6 @@ a {
     white-space: nowrap;
 }
 
-.tabbar .fill {
-    /* se ajusta a largura do pai */
-    width: 100%;
-}
-
 .tabbar .tab:active {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -122,7 +133,13 @@ a {
     color: #fff;
 }
 
-.tabbar .tab-highlight {
+.tabbar .scroller {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.tabbar .scroller .highlight {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -130,13 +147,6 @@ a {
     background: rgba(255, 255, 255, .5);
     -webkit-transition-duration: .3s;
     transition-duration: .3s;
-}
-
-
-/* content --------------------------------------------------------------------- */
-
-.content {
-    padding: 16px;
 }
 
 
@@ -174,6 +184,87 @@ a {
 }
 
 
+/* panel --------------------------------------------------------------------- */
+
+.panel {
+    display: block;
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, .35);
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-touch-callout: none;
+    transition: transform 300ms;
+    -webkit-transition: -webkit-transform 300ms;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.panel.closed {
+    transform: translate(-450px);
+    -webkit-transform: translate(-450px);
+}
+
+.panel.opened {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+}
+
+.panel .header {
+    color: #fff;
+    padding: 18px;
+    padding-top: 32px;
+    padding-bottom: 14px;
+    line-height: 20px;
+}
+
+.panel .header:active {
+    opacity: 0.9;
+}
+
+.panel .header .material-icons {
+    font-size: 56px;
+    position: relative;
+    left: -8px;
+}
+
+.panel .panel-content table {
+    width: 100%;
+}
+
+.panel .panel-content .item:active {
+    background-color: #eee;
+}
+
+.panel .panel-content .item td {
+    vertical-align: middle;
+    line-height: 19px;
+}
+
+.panel .panel-content .item .icon {
+    color: #666;
+    width: 64px;
+    text-align: center;
+}
+
+.panel .panel-content .item .content {
+    padding: 16px;
+    padding-left: 0;
+}
+
+
+/* fontes --------------------------------------------------------------------- */
+
+.font-14 {
+    font-size: 14px;
+}
+
+
 /* cores --------------------------------------------------------------------- */
 
 .bg-bluegray {
@@ -182,4 +273,12 @@ a {
 
 .bg-salmon {
     background-color: #e57373;
+}
+
+.gray {
+    color: #666;
+}
+
+.white-a-7 {
+    color: rgba(255, 255, 255, .7);
 }

@@ -13,19 +13,19 @@
             <div class="navbar bg-salmon">
                 <table>
                     <tr>
-                        <td class="navbar-left">
-                            <a href="#" class="navbar-button">
+                        <td class="left">
+                            <a class="button" onclick="ui4.togglePanel()">
                                 <i class="material-icons">&#xE5D2;</i>
                             </a>
                         </td>
-                        <td class="navbar-center">
-                            <div class="navbar-text" style="width:250px">UI4 - Mobile Lorem ipsum dolor sit amet</div>
+                        <td class="center">
+                            <div class="text" style="width:250px">UI4 - Mobile Lorem ipsum dolor sit amet</div>
                         </td>
-                        <td class="navbar-right">
-                            <a href="#" class="navbar-button">
+                        <td class="right">
+                            <a class="button">
                                 <i class="material-icons">&#xE86A;</i>
                             </a>
-                            <a href="#" class="navbar-button">
+                            <a class="button" onclick="ui4.togglePanel()">
                                 <i class="material-icons">&#xE5D4;</i>
                             </a>
                         </td>
@@ -39,10 +39,10 @@
                     <a href="" class="tab fill">Tab 2</a>
                     <a href="" class="tab fill">Tab 3</a>
                     <a href="" class="tab fill">Tab 4</a>
-                    <span class="tab-highlight" style="width:25%; transform:translate3d(0%, 0px, 0px)"></span>
+                    <span class="highlight" style="width:25%; transform:translate3d(0%, 0px, 0px)"></span>
                 </div>
             </div>
-            <div class="content" style="margin-top:112px">
+            <div class="page-content" style="margin-top:112px">
 
                 <!-- popover -->
                 <div class="popover">
@@ -54,6 +54,39 @@
                         <a href="" class="item"><i class="material-icons">&#xE163;</i>Enviar por e-mail</a>
                         <a href="" class="item"><i class="material-icons">&#xE8AD;</i>Imprimir</a>
                         <a href="" class="item"><i class="material-icons">&#xE872;</i>Excluir</a>
+                    </div>
+                </div>
+
+                <!-- panel -->
+                <div class="panel closed">
+                    <div class="header close bg-salmon">
+                        <i class="material-icons">&#xE7FD;</i>
+                        <div>Title</div>
+                        <div class="font-14 white-a-7">Description</div>
+                    </div>
+                    <div class="panel-content">
+                        <table>
+                            <tr class="item">
+                                <td class="icon">
+                                    <i class="material-icons">&#xE896;</i>
+                                </td>
+                                <td class="content">
+                                    <div>Title</div>
+                                    <div class="gray font-14">Description</div>
+                                    <div class="gray font-14">Category</div>
+                                </td>
+                            </tr>
+                            <tr class="item">
+                                <td class="icon">
+                                    <i class="material-icons">&#xE896;</i>
+                                </td>
+                                <td class="content">
+                                    <div>Title</div>
+                                    <div class="gray font-14">Description</div>
+                                    <div class="gray font-14">Category</div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
 
@@ -69,4 +102,5 @@
     </body>
     <script src="js/zepto.min.js"></script>
     <script src="js/ui4.js"></script>
+    <script src="js/test.js"></script>
 </html>
