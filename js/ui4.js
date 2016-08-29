@@ -1,7 +1,8 @@
 /*
     UI4-Mobile 1.0.0
-    Descrição: Interface gráfica para desenvolvimento de aplicações em dispositivo móvel.
     Criado por Janderson Costa em 27/08/2016.
+    Descrição: Interface gráfica para desenvolvimento de aplicações em dispositivo móvel.
+    Dependências: Zepto ou jQuery
 
     Uso: ver demo.html
     Melhor uso com AngularJS
@@ -103,14 +104,14 @@ function UI4(options) {
 
     function animateScrollBarToRight(element, x1, x2) {
         if (x1 <= x2) setTimeout(function() {
-            element.scrollLeft(x1 += 4);
+            element.scrollLeft(x1 += 3);
             animateScrollBarToRight(element, x1, x2);
         }, 1);
     }
 
     function animateScrollBarToLeft(element, x1, x2) {
         if (x2 <= x1) setTimeout(function() {
-            element.scrollLeft(x1 -= 4);
+            element.scrollLeft(x1 -= 3);
             animateScrollBarToLeft(element, x1, x2);
         }, 1);
     }
