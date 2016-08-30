@@ -5,7 +5,7 @@
     Dependências: Zepto ou jQuery
 
     Uso: ver demo.html
-    Melhor uso com AngularJS
+    Melhor uso com Vue JS ou Angular JS
 */
 
 
