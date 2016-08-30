@@ -15,6 +15,7 @@ function UI4(options) {
     options.activeTabIndex = options.activeTabIndex ? options.activeTabIndex : 0;
 
     var THIS = this,
+        HTML = $("html"),
         BODY = $("body"),
         NAVBAR = $(".navbar"),
         TABBAR = $(".tabbar"),
@@ -61,6 +62,9 @@ function UI4(options) {
             activeTab(index);
         }
     });
+
+    // ajusta a altura do wraper à página
+    $(".swipe .swipe-wrap").height(HTML[0].clientHeight);
 
 
     // TABBAR
